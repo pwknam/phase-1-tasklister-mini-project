@@ -2,13 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let form = document.getElementById("create-task-form");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    let newTaskDescription = document.getElementById("new-task-description")
     
-    //this attribute gets the value of the element. 
-    let valueOfTask = newTaskDescription.value
+    //get the value of the task
+    let test = document.querySelector("#new-task-description").value
 
     //take the string from the description and pass it into taskListFunction
-    taskListFunction(valueOfTask)
+    taskListFunction(test)
     form.reset();
 
   })
